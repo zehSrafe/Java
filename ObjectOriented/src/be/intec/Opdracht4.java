@@ -15,14 +15,17 @@ public class Opdracht4 {
                 sb.deleteCharAt(i);
             }
         }
+//        while (sb.indexOf(" ") >= 0){ // inedxof() returns -1 when done
+//            sb.deleteCharAt(sb.charAt(sb.indexOf(" ")));
+//        }
         System.out.println(sb);
 
-        for (int i = 0; i < sb.length(); i++){
-            System.out.println(i);
-            System.out.println(stringBuilder.charAt(i));
-            if (stringBuilder.charAt(i) == 't'){
-                stringBuilder.replace(i, i, "0");
-            }
+//        sb.toString().replaceAll("t", "tt");
+        int start = 0;
+        while (sb.indexOf("t", start) >= 0){ // inedxof() returns -1 when done
+            int foundIndex = sb.indexOf("t", start);
+            sb.insert(foundIndex, "t");
+            start = foundIndex + 2;
         }
         System.out.println(stringBuilder);
     }
