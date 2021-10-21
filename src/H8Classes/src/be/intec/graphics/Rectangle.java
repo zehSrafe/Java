@@ -35,16 +35,6 @@ public class Rectangle {
         setY(y);
     }
 
-    public void grow(double factor){
-        if (factor < 0){
-            setWidth(getWidth() + (-factor));
-            setLength(getLength() + (-factor));
-        } else {
-            setWidth(getWidth() + factor);
-            setLength(getLength() + factor);
-        }
-    }
-
     public void setWidth(double width) {
         if (width < 0){
             this.width = -width;
@@ -87,6 +77,16 @@ public class Rectangle {
 
     public double getArea() {
         return this.length * this.width;
+    }
+
+    public void grow(double factor){
+        if (factor < 0){
+            setWidth(getWidth() + (-factor));
+            setLength(getLength() + (-factor));
+        } else {
+            setWidth(getWidth() + factor);
+            setLength(getLength() + factor);
+        }
     }
 
     public double getCircumference() {
