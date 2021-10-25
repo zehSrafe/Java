@@ -7,7 +7,7 @@ public class Opdracht1 {
         int[] primes = new int[100];
         int index = 0;
 
-        for (int number = 2; number <= 100; number += 2){
+        for (int number = 2; number <= 100; number++){
             if (isPrime(number, primes)) {
                 primes[index++] = number;
             }
@@ -16,8 +16,13 @@ public class Opdracht1 {
     }
 
     private static boolean isPrime(int number, int[] primes){
-        for (int divider = 2; divider < number / 2; divider++){ // /2 => meer efficient want grootste mogelijke deler is getal/2
-
+        for (int divider : primes){ // /2 => meer efficient want grootste mogelijke deler is getal/2
+            if (divider == 0 || divider > number/2) { // divider word 0 als geen getallen meer
+                return true;
+            }
+            if (number % divider == 0){
+                return false;
+            }
         }
         return true;
     }
