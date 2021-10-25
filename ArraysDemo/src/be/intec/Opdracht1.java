@@ -1,26 +1,24 @@
 package be.intec;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class Opdracht1 {
     public static void main(String[] args) {
-        int[] array = new int[20];
-        for(int i = 0; i < array.length; i++){
-            array[i] = 7 * i;
-        }
-//        System.out.println(Arrays.toString(array));
-        for (int number : array){
-            System.out.println(number);
-        }
+        int[] primes = new int[100];
+        int index = 0;
 
-        for (int i = array.length - 1; i >= 0; i--){
-            System.out.println(array[i]);
+        for (int number = 2; number <= 100; number += 2){
+            if (isPrime(number, primes)) {
+                primes[index++] = number;
+            }
         }
+        System.out.println(Arrays.toString(primes));
+    }
 
-        boolean[] boolArray = new boolean[]{true, false, true};
-        for (boolean bool : boolArray){
-            System.out.println(bool);
+    private static boolean isPrime(int number, int[] primes){
+        for (int divider = 2; divider < number / 2; divider++){ // /2 => meer efficient want grootste mogelijke deler is getal/2
+
         }
+        return true;
     }
 }
