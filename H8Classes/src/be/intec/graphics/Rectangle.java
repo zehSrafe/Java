@@ -5,11 +5,12 @@ public class Rectangle {
     private double length;
     private double x;
     private double y;
+
     private static int count = 0;
     public static final int ANGLES = 4;
 
     {
-        count++;
+        count++; // count is static so everytime new object is created it does ++
     }
 
 //    public Rectangle(Rectangle rectangleObject){
@@ -79,6 +80,15 @@ public class Rectangle {
         return this.length * this.width;
     }
 
+    public double getCircumference() {
+        return this.length * 2 + this.width * 2;
+    }
+
+    public void setPosition(int x, int y){
+        setX(x);
+        setY(y);
+    }
+
     public void grow(double factor){
         if (factor < 0){
             setWidth(getWidth() + (-factor));
@@ -87,10 +97,6 @@ public class Rectangle {
             setWidth(getWidth() + factor);
             setLength(getLength() + factor);
         }
-    }
-
-    public double getCircumference() {
-        return this.length * 2 + this.width * 2;
     }
 
     public static int getCount() {
