@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ArraysDemo/ArraysDemo.iml" filepath="$PROJECT_DIR$/ArraysDemo/ArraysDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EenvoudigeKlassen/EenvoudigeKlassen.iml" filepath="$PROJECT_DIR$/EenvoudigeKlassen/EenvoudigeKlassen.iml" />
       <module fileurl="file://$PROJECT_DIR$/EnumDemo/EnumDemo.iml" filepath="$PROJECT_DIR$/EnumDemo/EnumDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/H8Classes/H8Classes.iml" filepath="$PROJECT_DIR$/H8Classes/H8Classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/H9/H9.iml" filepath="$PROJECT_DIR$/H9/H9.iml" />
