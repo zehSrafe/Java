@@ -74,8 +74,8 @@ public class Triangle extends Shape {
 
     @Override
     public void scale(int factor) {
-        setHeight((getHeight() / 100) * factor);
-        setWidth((getWidth() / 100) * factor);
+        setHeight((getHeight() * factor) / 100);
+        setWidth((getWidth() * factor) / 100);
     }
 
     public void draw(DrawingContext dc){

@@ -62,7 +62,7 @@ public class Circle extends Shape {
 
     @Override
     public void scale(int factor) {
-        setRadius((getRadius() / 100) * factor);
+        setRadius((getRadius() * factor) / 100);
     }
 
     public void draw(DrawingContext dc){

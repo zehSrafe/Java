@@ -73,13 +73,13 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString(){
-        return String.format("%dx%d at position %s", getWidth(), getLength(), super.toString());
+        return String.format("Rectangle: %dx%d at position %s", getWidth(), getLength(), super.toString());
     }
 
     @Override
     public void scale(int factor) {
-        setLength((getLength() / 100) * factor);
-        setWidth((getWidth() / 100) * factor);
+        setLength(getLength() * factor / 100);
+        setWidth(getWidth() * factor / 100);
     }
 
     public void draw(DrawingContext dc){

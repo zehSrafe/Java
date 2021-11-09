@@ -3,7 +3,7 @@ package be.intec.exercice2;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Drawing {
+public class Drawing implements Drawable{
     private Drawable[] drawables;
     private int size;
 
@@ -62,10 +62,31 @@ public class Drawing {
     }
 
     @Override
+    public void draw(DrawingContext dc) {
+        for (Drawable drawable : drawables){
+            if (drawable != null){
+                drawable.draw(dc);
+            }
+        }
+    }
+
+    @Override
+    public void scale(int factor) {
+        for (Drawable drawable : drawables){
+            if (drawable != null) {
+                drawable.scale(factor);
+            }
+        }
+    }
+
+    @Override
     public String toString() {
-        return "Drawing{" +
-                "drawables=" + Arrays.toString(drawables) +
-                ", size=" + size +
-                '}';
+        StringBuilder strToReturn = new StringBuilder();
+        for (Drawable drawable : drawables){
+            if (drawable != null){
+                strToReturn.append(drawable.toString()).append("\n");
+            }
+        }
+        return strToReturn.toString();
     }
 }
