@@ -16,5 +16,7 @@ public class DurationChronounitPeriodApp {
         System.out.println("Total amount of weeks: " + ChronoUnit.WEEKS.between(birthDate, nowDate));
         System.out.println("Total amount of months: " + ChronoUnit.MONTHS.between(birthDate, nowDate));
         System.out.println("Total amount of months: " + periodSinceBirth.toTotalMonths());
+
+        //some text for a git Push
     }
 }
