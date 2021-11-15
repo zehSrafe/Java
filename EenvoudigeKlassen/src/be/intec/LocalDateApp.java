@@ -3,7 +3,7 @@ package be.intec;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
-public class LocalDateTimeApp {
+public class LocalDateApp {
     public static void main(String[] args) {
         LocalDate birthDate = LocalDate.of(2000, 12, 13);
 
