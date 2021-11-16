@@ -1,9 +1,10 @@
 package be.intec.exercice2;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
-public class Drawing implements Drawable{
+public class Drawing implements Drawable, Iterable<Drawable>{
     private Drawable[] drawables;
     private int size;
 
@@ -31,6 +32,12 @@ public class Drawing implements Drawable{
 
         drawables[index] = drawable;
         size++;
+    }
+
+    public void add(Drawable... drawables){     //zorgt ervoor dat je een reeks van objecten kan meegeven als parameter. beter dan Drawable[]
+        for (Drawable d : drawables){
+            add(d);
+        }
     }
 
     public void remove(Drawable drawable) {
@@ -88,5 +95,29 @@ public class Drawing implements Drawable{
             }
         }
         return strToReturn.toString();
+    }
+
+    @Override
+    public Iterator<Drawable> iterator() {// we willen een drawable terug krijgen
+        return new DrawableIterator();
+    }
+
+    class DrawableIterator implements Iterator<Drawable>{   // we willen een drawable terug krijgen
+
+        private int indexNextElement = 0;
+
+        @Override
+        public boolean hasNext() {
+            if (drawables[indexNextElement] != null){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        @Override
+        public Drawable next() {
+            return drawables[indexNextElement++];
+        }
     }
 }

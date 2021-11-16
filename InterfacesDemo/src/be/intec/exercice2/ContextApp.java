@@ -12,7 +12,7 @@ public class ContextApp {
         myLittlePicasso.add(triangle);
         myLittlePicasso.add(circle);
 
-        DrawingContext drawingContext = new TextDrawingContext();
+        DrawingContext drawingContext = new GraphicalDrawingContext(800,800);
 
         myLittlePicasso.draw(drawingContext);
         myLittlePicasso.scale(Scalable.DOUBLE);

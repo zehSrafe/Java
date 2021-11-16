@@ -1,5 +1,7 @@
 package be.intec.exercice2;
 
+import java.util.Objects;
+
 public class Rectangle extends Shape {
     private int width;
     private int length;
@@ -74,6 +76,20 @@ public class Rectangle extends Shape {
     @Override
     public String toString(){
         return String.format("Rectangle: %dx%d at position %s", getWidth(), getLength(), super.toString());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return width == rectangle.width && length == rectangle.length && ANGLES == rectangle.ANGLES;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), width, length, ANGLES);
     }
 
     @Override
