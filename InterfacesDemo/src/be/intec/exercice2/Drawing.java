@@ -108,10 +108,14 @@ public class Drawing implements Drawable, Iterable<Drawable>{
 
         @Override
         public boolean hasNext() {
+            if (indexNextElement >= drawables.length){
+                return false;
+            }
             if (drawables[indexNextElement] != null){
                 return true;
             } else {
-                return false;
+                indexNextElement++;
+                return hasNext();
             }
         }
 
