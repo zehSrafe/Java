@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArraysDemo/ArraysDemo.iml" filepath="$PROJECT_DIR$/ArraysDemo/ArraysDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/EenvoudigeKlassen/EenvoudigeKlassen.iml" filepath="$PROJECT_DIR$/EenvoudigeKlassen/EenvoudigeKlassen.iml" />
       <module fileurl="file://$PROJECT_DIR$/EnumDemo/EnumDemo.iml" filepath="$PROJECT_DIR$/EnumDemo/EnumDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExceptionsDemo/ExceptionsDemo.iml" filepath="$PROJECT_DIR$/ExceptionsDemo/ExceptionsDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H4ProgrammeerLogica/H4ProgrammeerLogica.iml" filepath="$PROJECT_DIR$/H4ProgrammeerLogica/H4ProgrammeerLogica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H5DataTypes/H5DataTypes.iml" filepath="$PROJECT_DIR$/H5DataTypes/H5DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H6ObjectOriented/H6ObjectOriented.iml" filepath="$PROJECT_DIR$/H6ObjectOriented/H6ObjectOriented.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H7Arrays/H7Arrays.iml" filepath="$PROJECT_DIR$/H7Arrays/H7Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/H8Classes/H8Classes.iml" filepath="$PROJECT_DIR$/H8Classes/H8Classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/H9/H9.iml" filepath="$PROJECT_DIR$/H9/H9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H9Assossiations/H9Assossiations.iml" filepath="$PROJECT_DIR$/H9Assossiations/H9Assossiations.iml" />
       <module fileurl="file://$PROJECT_DIR$/IfElse/IfElse.iml" filepath="$PROJECT_DIR$/IfElse/IfElse.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/InterfacesDemo/InterfacesDemo.iml" filepath="$PROJECT_DIR$/InterfacesDemo/InterfacesDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java.iml" filepath="$PROJECT_DIR$/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Loops/Loops.iml" filepath="$PROJECT_DIR$/Loops/Loops.iml" />
       <module fileurl="file://$PROJECT_DIR$/NestedKlassen/NestedKlassen.iml" filepath="$PROJECT_DIR$/NestedKlassen/NestedKlassen.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ObjectOriented/ObjectOriented.iml" filepath="$PROJECT_DIR$/ObjectOriented/ObjectOriented.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringsDemo/StringsDemo.iml" filepath="$PROJECT_DIR$/StringsDemo/StringsDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/h5/h5.iml" filepath="$PROJECT_DIR$/h5/h5.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritance/oef7.iml" filepath="$PROJECT_DIR$/Inheritance/oef7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programmeerLogica/programmeerLogica.iml" filepath="$PROJECT_DIR$/programmeerLogica/programmeerLogica.iml" />
     </modules>
   </component>
 </project>
