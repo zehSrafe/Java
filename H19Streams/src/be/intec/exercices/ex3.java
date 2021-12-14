@@ -9,8 +9,8 @@ public class ex3 {
         Person p2 = new Person("a", "a");
         Person p3 = new Person("f", "f");
         Person p4 = new Person("v", "v");
-        Person[] pleps = Stream.of(p1, p2, p3, p4)
+        Person[] plebs = Stream.of(p1, p2, p3, p4)
                 .toArray(Person[]::new);
-        System.out.println(Arrays.toString(pleps));
+        System.out.println(Arrays.toString(plebs));
     }
 }

@@ -14,7 +14,11 @@ public class ex2 {
 /////////////////////////////////////////////////////////////////////
         OptionalInt maxNumbers = IntStream.of(intArray)
                 .max();
-        System.out.println(maxNumbers.getAsInt());
+//        if (maxNumbers.isPresent()) {
+            System.out.println(maxNumbers.getAsInt());
+//        } else {
+//            System.out.println("No result");
+//        }
 /////////////////////////////////////////////////////////////////////
         OptionalInt minNumbers = IntStream.of(intArray)
                 .min();

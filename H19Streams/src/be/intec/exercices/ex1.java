@@ -7,6 +7,7 @@ public class ex1 {
     public static void main(String[] args) {
         String[] words = {"This", "day", "is", "a", "good", "day"};
         Stream.of(words)
+//                .forEach(s -> System.out.println(s));     "long" version of below
                 .forEach(System.out::println);
 
         System.out.println("");
@@ -20,9 +21,9 @@ public class ex1 {
         Person p2 = new Person("a", "a");
         Person p3 = new Person("f", "f");
         Person p4 = new Person("v", "v");
-        Person[] pleps = {p1, p2, p3, p4};
+        Person[] plebs = {p1, p2, p3, p4};
 
-        Stream.of(pleps)
+        Stream.of(plebs)
                 .forEach(System.out::println);
     }
 }

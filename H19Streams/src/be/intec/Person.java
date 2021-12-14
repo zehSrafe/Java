@@ -1,4 +1,6 @@
-package be.intec.exercices;
+package be.intec;
+
+import java.util.Objects;
 
 public class Person {
     private String firstName;
@@ -12,6 +14,14 @@ public class Person {
         this(firstName, lastName, Gender.MEN, 21, 59.2f, 1.73f);
     }
 
+    public Person(String firstName, String lastName, int age) {
+        this(firstName, lastName, Gender.MEN, age, 59.2f, 1.73f);
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     public Person(String firstName, String lastName, Gender gender, int age, float mass, float length) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,6 +29,23 @@ public class Person {
         this.age = age;
         this.mass = mass;
         this.length = length;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Float.compare(person.mass, mass) == 0 && Float.compare(person.length, length) == 0 && firstName.equals(person.firstName) && lastName.equals(person.lastName) && gender == person.gender;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, gender, age, mass, length);
+    }
+
+    public String getName() {
+        return firstName + " " + lastName;
     }
 
     @Override
