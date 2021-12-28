@@ -52,10 +52,5 @@ public class Logo {
     @Override
     public String toString() {
         return String.format("LOGO: %n%s%nRECTANGLE: %n%s%nCIRCLE: %n%s", getText(), Arrays.toString(rectangles), Arrays.toString(circles));
-/*        return "Logo{" + "\n" +
-                "rectangle= " + rectangle.toString() + "\n" +
-                "circle= " + circle + "\n" +
-                "text= '" + text + '\'' + "\n" +
-                '}';*/
     }
 }
