@@ -1,6 +1,7 @@
 package be.intec.exercice;
 
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,6 +25,7 @@ public class ScannerToFile {
 
         createFile(path);
         writeDataToFile(path, inputList);
+        readDataFromFile(path);
     }
 
     private static void createFile(Path path){
@@ -44,10 +46,21 @@ public class ScannerToFile {
                 s = s.trim();
                 bufferedWriter.write(s.substring(0, 1).toUpperCase());
                 bufferedWriter.write(s.substring(1).toLowerCase());
-                if (!s.endsWith(".") || !s.endsWith("?") || !s.endsWith("!")){
-                    bufferedWriter.write(".");
+                if (!(s.endsWith(".") || s.endsWith("?") || s.endsWith("!"))){
+                    bufferedWriter.write(".");;
                 }
                 bufferedWriter.write("\n");
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void readDataFromFile(Path path){
+        try (FileReader fileReader = new FileReader(path.toFile())){
+            int character;
+            while ((character = fileReader.read()) != -1){
+                System.out.print((char) character);
             }
         } catch (IOException e){
             e.printStackTrace();
