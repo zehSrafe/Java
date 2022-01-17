@@ -17,8 +17,8 @@ public class StreamDemoApp4 {
                 .distinct()                 // (should be first or at least before any limitation line such as .limit() or .skip()) makes sure you don't get identical objects in result.
                                             // must implement equals method in Person for this to work. persons are then considered identical if they have identical values
                 .sorted(Comparator.comparing(Person::getName)) // will sort the output. you have to give it something to compare
-                .filter(person -> person.getName().toLowerCase().startsWith("l"))
-                .filter(person -> person.getName().contains("c"))
+//                .filter(person -> person.getName().toLowerCase().startsWith("l"))
+//                .filter(person -> person.getName().contains("c"))
 //                .skip(1)                    // skips 1 element (first one coming through)
 //                .limit(2)                   // limits amount of elements going through until this point
                 .forEach(System.out::println);

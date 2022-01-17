@@ -12,9 +12,12 @@ public class DurationChronounitPeriodApp {
         Period periodSinceBirth = Period.between(birthDate, nowDate);
 
         System.out.println("(" + birthDate + ") Walking on earth since " + periodSinceBirth.getYears() + " years, " + periodSinceBirth.getMonths() + " months and " + periodSinceBirth.getDays() + " days");
+
         System.out.println("Total amount of days: " + ChronoUnit.DAYS.between(birthDate, nowDate));
         System.out.println("Total amount of weeks: " + ChronoUnit.WEEKS.between(birthDate, nowDate));
         System.out.println("Total amount of months: " + ChronoUnit.MONTHS.between(birthDate, nowDate));
         System.out.println("Total amount of months: " + periodSinceBirth.toTotalMonths());
+
+        System.out.println(ChronoUnit.DAYS.between(birthDate, nowDate));
     }
 }

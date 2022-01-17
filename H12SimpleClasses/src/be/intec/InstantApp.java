@@ -14,5 +14,8 @@ public class InstantApp {
         System.out.println("Current + 5ms: " + currentTimePlusFive);
         System.out.println("Current + 3ns: " + currentTimePlusThree);
 
+        System.out.println(Instant.EPOCH);
+        System.out.println(Instant.MIN);
+        System.out.println(Instant.MAX);
     }
 }

@@ -12,6 +12,6 @@ public class DateTimeFormatterApp {
         DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         LocalDate convertedDate = LocalDate.parse(date, myFormat);
-        System.out.println(convertedDate);
+        System.out.println(convertedDate.format(myFormat));
     }
 }
