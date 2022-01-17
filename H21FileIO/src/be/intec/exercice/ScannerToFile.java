@@ -1,9 +1,6 @@
 package be.intec.exercice;
 
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,21 +15,24 @@ public class ScannerToFile {
         System.out.println("You can now start typing. Type 'exit' when you're done");
 
         String receivedInput;
-        while (!Objects.equals(receivedInput = input.nextLine(), "exit")){
+        while (!Objects.equals(receivedInput = input.nextLine().toLowerCase(), "exit")){
             inputList.add(receivedInput);
         }
         input.close();
-
-        createFile(path);
-        writeDataToFile(path, inputList);
-        readDataFromFile(path);
+        if (!inputList.isEmpty()){
+            createFile(path);
+            writeDataToFile(path, inputList);
+            readDataFromFile(path);
+        } else {
+            System.out.println("Received no data. Aborting mission");
+        }
     }
 
     private static void createFile(Path path){
         try {
-            Files.createDirectories(path.getParent());  // getParent goes one level up inside folder. .resolve goes one in
+            Files.createDirectories(path.getParent());
             if (!Files.exists(path)){
-                Files.createFile(path);    //must create directories before file. getParent goes one "/" higher in path
+                Files.createFile(path);
             }
         } catch (IOException e){
             e.printStackTrace();
@@ -41,7 +41,7 @@ public class ScannerToFile {
 
     private static void writeDataToFile(Path path, List<String> input){
         try (FileWriter fileWriter = new FileWriter(path.toFile());
-             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){      //beacause we have two autoclosable things here
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){
             for (String s : input){
                 s = s.trim();
                 bufferedWriter.write(s.substring(0, 1).toUpperCase());
@@ -58,9 +58,10 @@ public class ScannerToFile {
 
     private static void readDataFromFile(Path path){
         try (FileReader fileReader = new FileReader(path.toFile())){
-            int character;
-            while ((character = fileReader.read()) != -1){
-                System.out.print((char) character);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null){
+                System.out.println(line);
             }
         } catch (IOException e){
             e.printStackTrace();
