@@ -40,14 +40,14 @@ public class ScannerToFile {
     }
 
     private static void writeDataToFile(Path path, List<String> input){
-        try (FileWriter fileWriter = new FileWriter(path.toFile());
+        try (FileWriter fileWriter = new FileWriter(path.toFile(), true);   // true makes it so you can append
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){
             for (String s : input){
                 s = s.trim();
                 bufferedWriter.write(s.substring(0, 1).toUpperCase());
                 bufferedWriter.write(s.substring(1).toLowerCase());
                 if (!(s.endsWith(".") || s.endsWith("?") || s.endsWith("!"))){
-                    bufferedWriter.write(".");;
+                    bufferedWriter.write(".");
                 }
                 bufferedWriter.write("\n");
             }
