@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 
 public class PersonApp {
     public static void main(String[] args) {
-        Path path = Paths.get("H21FileIO/src/be/intec/PersonToFile/Person.txt");
-        Person person = new Person("Loïc", 21, "Good");
+        Person person = new Person("Loïc", "Deketelaere", "13/12/2000");
+        Path path = Paths.get("H21FileIO/src/be/intec/PersonToFile/Person_" + person.getFirstName() + person.getLastName() + ".txt");
 
         createFile(path);
         writeObjectToFile(path, person);
@@ -26,6 +26,15 @@ public class PersonApp {
         }
     }
 
+    private static void writeObjectToFile(Path path, Person person){
+        try (FileOutputStream fileOutputStream = new FileOutputStream(path.toFile());
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            objectOutputStream.writeObject(person);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
     private static void readDAtaFromFile(Path path){
         try (FileInputStream fileInputStream = new FileInputStream(path.toFile());
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)){
@@ -34,15 +43,5 @@ public class PersonApp {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    private static void writeObjectToFile(Path path, Person person){
-        try (FileOutputStream fileOutputStream = new FileOutputStream(path.toFile());
-             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-            objectOutputStream.writeObject(person);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-
     }
 }

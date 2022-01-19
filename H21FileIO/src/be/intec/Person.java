@@ -4,27 +4,43 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.Duration;
+import java.time.LocalDate;
 
 public class Person implements Serializable {// implements so we can sererialize our person when tryinh to add its object to a file
-    String name;
-    int age;
-    String mood;
-    private transient Duration timeLoggedOn;
+    String firstName;
+    String lastName;
+    LocalDate birthDay;
+    private transient Duration timeLoggedOn; // transient makes it so the variable isn't serializable
 
-    public Person(String name, int age, String mood) {
-        this.name = name;
-        this.age = age;
-        this.mood = mood;
+    public Person(String firstName, String lastName, String birthDay) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        setBirthDay(birthDay);
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", mood='" + mood + '\'' +
-                ", timeLoggedOn='" + timeLoggedOn + '\'' +
-                '}';
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public LocalDate getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        String[] dates = birthDay.split("/");
+        this.birthDay = LocalDate.of(Integer.parseInt(dates[2]), Integer.parseInt(dates[1]), Integer.parseInt(dates[0]));
     }
 
     private void readObject(ObjectInputStream oos){
@@ -36,5 +52,15 @@ public class Person implements Serializable {// implements so we can sererialize
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDay=" + birthDay +
+                ", timeLoggedOn=" + timeLoggedOn +
+                '}';
     }
 }
