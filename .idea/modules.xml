@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/H19Streams/H19Streams.iml" filepath="$PROJECT_DIR$/H19Streams/H19Streams.iml" />
       <module fileurl="file://$PROJECT_DIR$/H20Collections/H20Collections.iml" filepath="$PROJECT_DIR$/H20Collections/H20Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/H21FileIO/H21FileIO.iml" filepath="$PROJECT_DIR$/H21FileIO/H21FileIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/H22Multithreading/H22Multithreading.iml" filepath="$PROJECT_DIR$/H22Multithreading/H22Multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/H4ProgrammeerLogica/H4ProgrammeerLogica.iml" filepath="$PROJECT_DIR$/H4ProgrammeerLogica/H4ProgrammeerLogica.iml" />
       <module fileurl="file://$PROJECT_DIR$/H5DataTypes/H5DataTypes.iml" filepath="$PROJECT_DIR$/H5DataTypes/H5DataTypes.iml" />
       <module fileurl="file://$PROJECT_DIR$/H6ObjectOriented/H6ObjectOriented.iml" filepath="$PROJECT_DIR$/H6ObjectOriented/H6ObjectOriented.iml" />
